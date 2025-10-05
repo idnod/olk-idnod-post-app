@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header con nombre y foto -->
+        <header class="header">
+            <div class="header-content">
+                <div class="profile-section">
+                    <h1 class="name">{{ .Site.Params.author }}</h1>
+                    <p class="subtitle">{{ .Site.Params.description }}</p>
+                </div>
+                <div class="profile-image">
+                    <img src="{{ .Site.Params.profileImage | default "/images/profile.jpg" }}" alt="{{ .Site.Params.author }}" class="profile-img">
+                </div>
+            </div>
+        </header>
+        
+        <!-- Links Section -->
+        <main class="links-container">
+            <!-- Social Networks Section -->
+            <div class="section-container">
+                <div class="section-header" onclick="toggleSection('social-networks')">
+                    <h2 class="section-title">
+                        <i class="fas fa-share-alt"></i>
+                        Social Networks
+                    </h2>
+                    <i class="fas fa-chevron-down section-toggle" id="social-networks-toggle"></i>
+                </div>
+                <div class="section-content collapsed" id="social-networks-content">
+                    <div class="links-grid">
+                        {{ range .Site.Params.links }}
+                        <div class="link-card" data-link-id="{{ .id }}">
+                            <div class="link-content" onclick="openLink('{{ .url }}')">
+                                <div class="link-icon">
+                                    <i class="{{ .icon }}"></i>
+                                </div>
+                                <div class="link-info">
+                                    <h3 class="link-title">{{ .title }}</h3>
+                                    <p class="link-description">{{ .description }}</p>
+                                </div>
+                                <div class="link-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </div>
+                            <div class="link-info-btn" onclick="openModal('{{ .id }}')">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="section-container">
+                <div class="section-header" onclick="toggleSection('medals')">
+                    <h2 class="section-title">
+                        <i class="fas fa-certificate"></i>
+                        Certifications
+                    </h2>
+                    <i class="fas fa-chevron-down section-toggle" id="medals-toggle"></i>
+                </div>
+                <div class="section-content collapsed" id="medals-content">
+                    <div class="links-grid">
+                        {{ range .Site.Params.certifications }}
+                        <div class="link-card medal-card" data-link-id="{{ .id }}">
+                            <div class="link-content" onclick="openModal('{{ .id }}')">
+                                <div class="link-icon medal-icon">
+                                    <i class="{{ .icon }}"></i>
+                                </div>
+                                <div class="link-info">
+                                    <h3 class="link-title">{{ .title }}</h3>
+                                    <p class="link-description">{{ .description }}</p>
+                                    <span class="medal-date">{{ .date }}</span>
+                                </div>
+                                <div class="link-arrow">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Section -->
+            <div class="section-container">
+                <div class="section-header" onclick="toggleSection('projects')">
+                    <h2 class="section-title">
+                        <i class="fas fa-cube"></i>
+                        Products
+                    </h2>
+                    <i class="fas fa-chevron-down section-toggle" id="projects-toggle"></i>
+                </div>
+                <div class="section-content collapsed" id="projects-content">
+                    <div class="links-grid">
+                        {{ range .Site.Params.products }}
+                        <div class="link-card project-card" data-link-id="{{ .id }}">
+                            <div class="link-content" onclick="openLink('{{ .url }}')">
+                                <div class="link-icon project-icon">
+                                    <i class="{{ .icon }}"></i>
+                                </div>
+                                <div class="link-info">
+                                    <h3 class="link-title">{{ .title }}</h3>
+                                    <p class="link-description">{{ .description }}</p>
+                                    <div class="tech-stack">
+                                        {{ range .tech }}
+                                        <span class="tech-tag">{{ . }}</span>
+                                        {{ end }}
+                                    </div>
+                                </div>
+                                <div class="link-arrow">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </div>
+                            <div class="link-info-btn" onclick="openModal('{{ .id }}')">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Organizations Section -->
+            <div class="section-container">
+                <div class="section-header" onclick="toggleSection('organizations')">
+                    <h2 class="section-title">
+                        <i class="fas fa-building"></i>
+                        Organizations
+                    </h2>
+                    <i class="fas fa-chevron-down section-toggle" id="organizations-toggle"></i>
+                </div>
+                <div class="section-content collapsed" id="organizations-content">
+                    <div class="links-grid">
+                        {{ range .Site.Params.organizations }}
+                        <div class="link-card organization-card" data-link-id="{{ .id }}">
+                            <div class="link-content" onclick="openModal('{{ .id }}')">
+                                <div class="link-icon organization-icon">
+                                    <i class="{{ .icon }}"></i>
+                                </div>
+                                <div class="link-info">
+                                    <h3 class="link-title">{{ .title }}</h3>
+                                    <p class="link-description">{{ .description }}</p>
+                                    <div class="organization-details">
+                                        <span class="organization-name">{{ .organization }}</span>
+                                        <span class="organization-role">{{ .role }} • {{ .period }}</span>
+                                    </div>
+                                </div>
+                                <div class="link-arrow">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Modal -->
+        <div id="linkModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img id="modalImage" src="" alt="">
+                    </div>
+                    <div class="modal-info">
+                        <h2 id="modalTitle"></h2>
+                        <p id="modalDescription"></p>
+                        <a id="modalLink" href="#" class="modal-link-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Visitar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.author }}. Hecho con ❤️ y Hugo.</p>
+        </footer>
+    </div>
+    
+    <script src="/js/script.js"></script>
+</body>
+</html>

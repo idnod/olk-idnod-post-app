@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Lherc Links</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="profile-section">
+                    <h1 class="name">Lherc</h1>
+                    <p class="subtitle">Mi página de enlaces personales</p>
+                </div>
+                <div class="profile-image">
+                    <div class="profile-img" style="width: 120px; height: 120px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">👤</div>
+                </div>
+            </div>
+        </header>
+        
+        <main class="links-container">
+            <div class="links-grid">
+                <div class="link-card" data-link-id="github">
+                    <div class="link-content" onclick="openLink('https://github.com/lherc')">
+                        <div class="link-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="link-info">
+                            <h3 class="link-title">GitHub</h3>
+                            <p class="link-description">Mi código y proyectos</p>
+                        </div>
+                        <div class="link-arrow">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    <div class="link-info-btn" onclick="openModal('github')">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                </div>
+                
+                <div class="link-card" data-link-id="linkedin">
+                    <div class="link-content" onclick="openLink('https://linkedin.com/in/lherc')">
+                        <div class="link-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="link-info">
+                            <h3 class="link-title">LinkedIn</h3>
+                            <p class="link-description">Mi perfil profesional</p>
+                        </div>
+                        <div class="link-arrow">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    <div class="link-info-btn" onclick="openModal('linkedin')">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2025 Lherc. Hecho con ❤️ y Hugo.</p>
+        </footer>
+    </div>
+    
+    <script src="/js/script.js"></script>
+</body>
+</html>

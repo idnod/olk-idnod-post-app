@@ -1,0 +1,13 @@
+# Imágenes de Ejemplo
+
+Para completar el diseño, necesitas agregar las siguientes imágenes:
+
+- profile.jpg (120x120px) - Tu foto de perfil
+- github.jpg - Imagen para el modal de GitHub
+- linkedin.jpg - Imagen para el modal de LinkedIn  
+- twitter.jpg - Imagen para el modal de Twitter
+- portfolio.jpg - Imagen para el modal de Portfolio
+- blog.jpg - Imagen para el modal de Blog
+- email.jpg - Imagen para el modal de Email
+
+Puedes usar imágenes de 400x300px para los modales.
