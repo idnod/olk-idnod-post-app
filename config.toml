@@ -55,8 +55,8 @@ title = 'Lherc Links'
   icon = "fas fa-envelope"
   image = "images/email.jpg"
 
-  # Certifications Section
-  [[params.certifications]]
+  # Solutions Section
+  [[params.solutions]]
   id = "aws-certified"
   title = "AWS Certified Solutions Architect"
   description = "Professional certification in AWS cloud solutions architecture"
@@ -64,7 +64,7 @@ title = 'Lherc Links'
   image = "images/aws-certification.jpg"
   date = "2023-12-15"
   
-  [[params.certifications]]
+  [[params.solutions]]
   id = "google-cloud-certified"
   title = "Google Cloud Professional"
   description = "Professional certification in Google Cloud Platform"
