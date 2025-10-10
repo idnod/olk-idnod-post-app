@@ -5,7 +5,7 @@ title = 'Lherc Links'
 [params]
   description = "My personal links page"
   author = "Lherc"
-  profileImage = "/images/profile.jpg"
+  profileImage = "images/profile.jpg"
   
   [[params.links]]
   id = "github"
@@ -13,7 +13,7 @@ title = 'Lherc Links'
   description = "My code and projects"
   url = "https://github.com/lherc"
   icon = "fab fa-github"
-  image = "/images/github.jpg"
+  image = "images/github.jpg"
   
   [[params.links]]
   id = "linkedin"
@@ -21,7 +21,7 @@ title = 'Lherc Links'
   description = "My professional profile"
   url = "https://linkedin.com/in/lherc"
   icon = "fab fa-linkedin"
-  image = "/images/linkedin.jpg"
+  image = "images/linkedin.jpg"
   
   [[params.links]]
   id = "twitter"
@@ -29,7 +29,7 @@ title = 'Lherc Links'
   description = "My thoughts and updates"
   url = "https://twitter.com/lherc"
   icon = "fab fa-twitter"
-  image = "/images/twitter.jpg"
+  image = "images/twitter.jpg"
   
   [[params.links]]
   id = "portfolio"
@@ -37,7 +37,7 @@ title = 'Lherc Links'
   description = "My projects and work"
   url = "https://lherc.dev"
   icon = "fas fa-briefcase"
-  image = "/images/portfolio.jpg"
+  image = "images/portfolio.jpg"
   
   [[params.links]]
   id = "blog"
@@ -45,7 +45,7 @@ title = 'Lherc Links'
   description = "Articles and tutorials"
   url = "https://blog.lherc.dev"
   icon = "fas fa-blog"
-  image = "/images/blog.jpg"
+  image = "images/blog.jpg"
   
   [[params.links]]
   id = "email"
@@ -53,7 +53,7 @@ title = 'Lherc Links'
   description = "Contact me directly"
   url = "mailto:hola@lherc.dev"
   icon = "fas fa-envelope"
-  image = "/images/email.jpg"
+  image = "images/email.jpg"
 
   # Certifications Section
   [[params.certifications]]
@@ -61,7 +61,7 @@ title = 'Lherc Links'
   title = "AWS Certified Solutions Architect"
   description = "Professional certification in AWS cloud solutions architecture"
   icon = "fab fa-aws"
-  image = "/images/aws-certification.jpg"
+  image = "images/aws-certification.jpg"
   date = "2023-12-15"
   
   [[params.certifications]]
@@ -69,7 +69,7 @@ title = 'Lherc Links'
   title = "Google Cloud Professional"
   description = "Professional certification in Google Cloud Platform"
   icon = "fab fa-google"
-  image = "/images/gcp-certification.jpg"
+  image = "images/gcp-certification.jpg"
   date = "2023-10-20"
 
   # Products Section
@@ -79,7 +79,7 @@ title = 'Lherc Links'
   description = "Cross-platform mobile application with advanced features"
   url = "https://github.com/lherc/mobile-app"
   icon = "fas fa-mobile-alt"
-  image = "/images/mobile-product.jpg"
+  image = "images/mobile-product.jpg"
   tech = ["React Native", "TypeScript", "Firebase"]
   
   [[params.products]]
@@ -88,7 +88,7 @@ title = 'Lherc Links'
   description = "Scalable web platform with modern architecture"
   url = "https://github.com/lherc/web-platform"
   icon = "fas fa-globe"
-  image = "/images/web-product.jpg"
+  image = "images/web-product.jpg"
   tech = ["Next.js", "PostgreSQL", "Docker"]
 
   # Organizations Section
@@ -98,7 +98,7 @@ title = 'Lherc Links'
   description = "Leader of the local tech community"
   organization = "Tech Community Hub"
   icon = "fas fa-users"
-  image = "/images/tech-community.jpg"
+  image = "images/tech-community.jpg"
   role = "Leader"
   period = "2022 - Present"
   
@@ -108,7 +108,7 @@ title = 'Lherc Links'
   description = "Active contributor to open source projects"
   organization = "Mozilla Foundation"
   icon = "fab fa-firefox-browser"
-  image = "/images/mozilla-contributor.jpg"
+  image = "images/mozilla-contributor.jpg"
   role = "Contributor"
   period = "2021 - Present"
   
